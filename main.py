@@ -6,11 +6,11 @@ print(os.getcwd())
 
 files = os.listdir()
 extensions = {
-    "images": [".jpg", ".png", ".jpeg", ".gif",".svg","ico"],
+    "images": [".jpg", ".png", ".jpeg", ".gif",".svg","ico",".webp"],
     "videos": [".mp4", ".mkv"],
     "musics": [".mp3", ".wav"],
     "zip": [".zip", ".tgz", ".rar", ".tar",".gz"],
-    "documents": [".doc", ".docx", ".pdf", ".txt",".csv",".xlsx"],
+    "documents": [".doc", ".docx", ".pdf", ".txt",".csv",".xlsx",".pptx"],
     "programs": [".py", ".php", ".html",".sql",".xml",".json","rss"],
     "exe": [".exe",".msi",".dll"],
     "iso": [".iso"]
