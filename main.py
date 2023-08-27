@@ -2,7 +2,7 @@ import os
 import datetime
 
 os.chdir(r"C:\\Users\\user\\Downloads")
-print(os.getcwd())
+# print(os.getcwd())
 
 files = os.listdir()
 extensions = {
