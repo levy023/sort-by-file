@@ -4,6 +4,8 @@ import datetime
 os.chdir(r"C:\\Users\\user\\Downloads")
 # print(os.getcwd())
 
+# folders = os.listdir()
+
 files = os.listdir()
 extensions = {
     "images": [".jpg", ".png", ".jpeg", ".gif",".svg","ico",".webp"],
@@ -27,9 +29,23 @@ def sorting(file):
 
 
 date_du_jour = datetime.date.today()
-
-
 directori = "C:\\Users\\user\\Downloads\\classement"+date_du_jour.strftime("%Y-%m-%d")
+
+
+
+folders = [folder for folder in os.listdir() if os.path.isdir(folder)]
+
+# Déplacer les dossiers
+for folder in folders:
+    try:
+        source_dir = os.path.join(os.getcwd(), folder)
+        destination_dir = os.path.join(directori, "dossier", folder)
+        cmd = f'move "{source_dir}" "{destination_dir}"'
+        os.system(cmd)
+    except FileNotFoundError as e:
+        print(f"Impossible de trouver le dossier '{folder}' car il n'existe pas.")
+
+
 
 for file in files:
     dis = sorting(file)
